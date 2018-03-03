@@ -2,7 +2,7 @@ import unittest
 from ipynb.fs.full.index import (three_x_y_at_one, three_x_y_at_three, three_x_y_at_six,
  three_x_y_at_nine, y_values_for_at_one, y_values_for_at_three, y_values_for_at_six, y_values_for_at_nine,
  df_dx_when_y_equals_one, df_dx_when_y_equals_three, df_dx_when_y_equals_six, df_dx_when_y_equals_nine,
- df_dx_3xy)
+ df_dx_3xy, multivariable_output_at, term_df_dx, term_df_dy, df_dy)
 
 class DerivativeRules(unittest.TestCase):
     def test_three_x_y_at_one(self):
@@ -56,3 +56,29 @@ class DerivativeRules(unittest.TestCase):
         self.assertEqual(df_dx_3xy(2, 1), 3)
         self.assertEqual(df_dx_3xy(2, 2), 6)
         self.assertEqual(df_dx_3xy(5, 2), 6)
+
+    def test_multivariable_output_at(self):
+        four_x_squared_y_plus_three_x_plus_y = [(4, 2, 1), (3, 1, 0), (1, 0, 1)]
+        two_x_cubed_y_plus_three_y_x_plus_x = [(2, 3, 1), (3, 1, 1), (1, 1, 0)]
+        self.assertEqual(multivariable_output_at(four_x_squared_y_plus_three_x_plus_y, 1, 1), 8)
+        self.assertEqual(multivariable_output_at(four_x_squared_y_plus_three_x_plus_y, 2, 2), 40)
+        self.assertEqual(multivariable_output_at(two_x_cubed_y_plus_three_y_x_plus_x, 2, 2), 46)
+
+    def test_term_df_dx(self):
+        four_x_squared_y = (4, 2, 1)
+        self.assertEqual(term_df_dx(four_x_squared_y), (8, 1, 1))
+        y = (1, 0, 1)
+        self.assertEqual(term_df_dx(y), (0, -1, 1))
+
+    def test_term_df_dy(self):
+        four_x_squared_y = (4, 2, 1)
+        self.assertEqual(term_df_dy(four_x_squared_y), (4, 2, 0))
+        y = (1, 0, 1)
+        three_x = (3, 1, 0)
+        self.assertEqual(term_df_dy(three_x), (0, 1, -1))
+
+    def test_df_dy(self):
+        four_x_squared_y_plus_three_x_plus_y = [(4, 2, 1), (3, 1, 0), (1, 0, 1)]
+        self.assertEqual(df_dy(four_x_squared_y_plus_three_x_plus_y), [(4, 2, 0), (1, 0, 0)])
+        two_x_cubed_y_plus_three_y_x_plus_x = [(2, 3, 1), (3, 1, 1), (1, 1, 0)]
+        self.assertEqual(df_dy(two_x_cubed_y_plus_three_y_x_plus_x), [(2, 3, 0), (3, 1, 0)])
