@@ -111,7 +111,7 @@ plotly.offline.iplot(fig_constants_lin_functions)
 <div id="b9f28f7d-614c-457b-a33a-f3f647415c1f" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("b9f28f7d-614c-457b-a33a-f3f647415c1f", [{"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=1", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=3", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=6", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=9", "text": []}], {"title": "constants with linear functions"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
-So as you can see, plotting our multivariable $f(x, y)$ at different values of $y$ above lines up conceptually to having one plot step through these values of $y$. 
+So as you can see, plotting our multivariable $f(x, y)$ at different values of $y$ above lines up conceptually to having one plot step through these values of $y$.
 
 ![](./plot3xy.png)
 
@@ -128,7 +128,7 @@ plotly.offline.iplot(fig_constants_lin_functions)
 <div id="eca262a6-80f6-415b-bf1b-0ddac49dc241" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("eca262a6-80f6-415b-bf1b-0ddac49dc241", [{"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=1", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=3", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=6", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": null, "mode": "line", "name": "f(x, y) at y=9", "text": []}], {"title": "constants with linear functions"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
-Now let's think of how to take the derivative of our $ \frac{\delta f}{\delta x} f(x, y)$ at values of $y$.  Knowing how to think about partial derivatives of multivarivable functions, what is $ \frac{\delta f}{\delta x} $ at the following values of $y$.
+Now let's think of how to take the derivative of our $ \frac{\delta f}{\delta x} f(x, y)$ at values of $y$.  Knowing how to think about partial derivatives of multivariable functions, what is $ \frac{\delta f}{\delta x} $ at the following values of $y$.
 
 
 ```python
@@ -154,7 +154,7 @@ def df_dx_when_y_equals_nine():
     pass
 ```
 
-So notice that there is a pattern here, in taking $ \frac{\delta f}{\delta x}$ for our function $f(x, y) = 3xy$.  Now write a function that calculates $ \frac{\delta f}{\delta x}$ for our function $f(x,y)$ at any provided $x$ and $y$ value. 
+So notice that there is a pattern here, in taking $ \frac{\delta f}{\delta x}$ for our function $f(x, y) = 3xy$.  Now write a function that calculates $ \frac{\delta f}{\delta x}$ for our function $f(x,y)$ at any provided $x$ and $y$ value.
 
 
 ```python
@@ -243,7 +243,7 @@ def term_df_dx(term):
 
 ```python
 four_x_squared_y = (4, 2, 1)
-term_df_dx(four_x_squared_y) # (8, 1, 1) 
+term_df_dx(four_x_squared_y) # (8, 1, 1)
 ```
 
 > This solution represents $8xy$
