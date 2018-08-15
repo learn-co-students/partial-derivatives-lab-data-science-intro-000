@@ -181,7 +181,7 @@ So as you can see, our $y$ value influences the function, and from there it's a 
 
 ## Using our partial derivative rule
 
-Now let's consider the function $ f(x, y) = 4x^2y + 3x + y$.  Now soon we will want to take the derivative of this function with respect to $x$.  We know that in doing something like that, we will need to translate this function into code, and that when we do so, we will need to capture the exponent of any terms as well as.
+Now let's consider the function $ f(x, y) = 4x^2y + 3x + y$.  Soon we will want a function that takes the derivative of this function with respect to $x$.  We know that in doing something like that, we will need to translate this function into code, and that when we do so, we will need to capture the exponents of each term as well as.
 
 Remember that the way we expressed a single variable function, $f(x)$ in Python was to represent the constant, and $x$ exponent for each term.  For example, the function $f(x) = 3x^2 + 2x$ can be represented as the following:
 
@@ -311,7 +311,7 @@ term_df_dy(three_x) # (0, 1, -1)
 
 > This represents that $\frac{\delta f}{\delta y}3x = 0$
 
-Now let's write a function `df_dy` that takes multiple terms and returns an list of tuples that represent the derivative of our multivariable function.  So here is our function: $ f(x, y) = 4x^2y + 3x + y$.
+Now let's write a function `df_dy` that takes multiple terms and returns a list of tuples that represent the derivative of our multivariable function.  So here is our function: $ f(x, y) = 4x^2y + 3x + y$.
 
 
 ```python
