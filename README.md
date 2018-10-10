@@ -77,13 +77,13 @@ Now we are ready to plot the function $f(x) = x $, $f(x) = 3x $, $f(x) = 6x $ an
 ```python
 from graph import trace_values
 
-y_at_one_trace = trace_values(zero_to_ten, y_values_for_at_one(zero_to_ten), mode = 'line', name = 'f(x, y) at y=1') or {}
+y_at_one_trace = trace_values(zero_to_ten, y_values_for_at_one(zero_to_ten), mode = 'lines', name = 'f(x, y) at y=1') or {}
 
-y_at_three_trace = trace_values(zero_to_ten, y_values_for_at_three(zero_to_ten),  mode = 'line',  name = 'f(x, y) at y=3') or {}
+y_at_three_trace = trace_values(zero_to_ten, y_values_for_at_three(zero_to_ten),  mode = 'lines',  name = 'f(x, y) at y=3') or {}
 
-y_at_six_trace = trace_values(zero_to_ten, y_values_for_at_six(zero_to_ten),  mode = 'line', name = 'f(x, y) at y=6') or {}
+y_at_six_trace = trace_values(zero_to_ten, y_values_for_at_six(zero_to_ten),  mode = 'lines', name = 'f(x, y) at y=6') or {}
 
-y_at_nine_trace = trace_values(zero_to_ten, y_values_for_at_nine(zero_to_ten),  mode = 'line', name = 'f(x, y) at y=9') or {}
+y_at_nine_trace = trace_values(zero_to_ten, y_values_for_at_nine(zero_to_ten),  mode = 'lines', name = 'f(x, y) at y=9') or {}
 
 ```
 
