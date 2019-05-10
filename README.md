@@ -1,4 +1,6 @@
 
+## Partial Derivatives - Lab
+
 ### Introduction
 
 In this lesson, we'll get some more practice with partial derivatives.
