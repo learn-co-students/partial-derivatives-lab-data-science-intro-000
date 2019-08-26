@@ -1,13 +1,15 @@
 
+# Partial Derivatives Lab
+
 ### Introduction
 
 In this lesson, we'll get some more practice with partial derivatives.
 
 ### Breaking down multivariable functions
 
-In our explanation of derivatives, we discussed how taking the derivative of multivariable functions is similar to taking the derivatives of a multivariable function like $f(x)$.  In the first section we'll work up to taking the partial derivative of the multilinear function $ f(x,y) = 3xy $.  Here's what the function looks like in a 3d graph.
+In our explanation of derivatives, we discussed how taking the derivative of multivariable functions is similar to taking the derivatives of a single variable function like $f(x)$.  In the first section we'll work up to taking the partial derivative of the multilinear function $ f(x,y) = 3xy $.  Here's what the function looks like in a 3d graph.
 
-![](./plot3xy.png)
+![](./3xy.png)
 
 Before we get there, let's first just first break this function down into it's equivalent of different slices, like we have done previously.  We'll do this by taking different slices of the function, stepping through various values of $y$. So instead of considering the entire function, $f(x, y) = 3xy $ we can think about the function $f(x, y)$ evaluated at various points, where $y = 1$, $y = 3$, $y = 6$, and $y = 9$.
 
@@ -126,7 +128,7 @@ plotly.offline.iplot(fig_constants_lin_functions)
 
 
 
-<div id="53e562ab-c5e3-4f83-918f-7823b81e93b5" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("53e562ab-c5e3-4f83-918f-7823b81e93b5", [{"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30], "mode": "line", "name": "f(x, y) at y=1", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90], "mode": "line", "name": "f(x, y) at y=3", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 18, 36, 54, 72, 90, 108, 126, 144, 162, 180], "mode": "line", "name": "f(x, y) at y=6", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 27, 54, 81, 108, 135, 162, 189, 216, 243, 270], "mode": "line", "name": "f(x, y) at y=9", "text": []}], {"title": "constants with linear functions"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="02ab18a3-2ecb-44b0-8a53-edfc44f6427f" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("02ab18a3-2ecb-44b0-8a53-edfc44f6427f", [{"mode": "lines", "name": "f(x, y) at y=1", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30], "type": "scatter", "uid": "2595bb0a-cccd-11e8-8dc3-88e9fe61eb3a"}, {"mode": "lines", "name": "f(x, y) at y=3", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90], "type": "scatter", "uid": "2595bc74-cccd-11e8-a5d6-88e9fe61eb3a"}, {"mode": "lines", "name": "f(x, y) at y=6", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 18, 36, 54, 72, 90, 108, 126, 144, 162, 180], "type": "scatter", "uid": "2595bd26-cccd-11e8-a68b-88e9fe61eb3a"}, {"mode": "lines", "name": "f(x, y) at y=9", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 27, 54, 81, 108, 135, 162, 189, 216, 243, 270], "type": "scatter", "uid": "2595bdba-cccd-11e8-b69d-88e9fe61eb3a"}], {"title": "constants with linear functions"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
 So as you can see, plotting our multivariable $f(x, y)$ at different values of $y$ above lines up conceptually to having one plot step through these values of $y$. 
@@ -143,10 +145,10 @@ plotly.offline.iplot(fig_constants_lin_functions)
 ```
 
 
-<div id="a1de7b62-97b5-46ce-8b15-8d57010b4106" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("a1de7b62-97b5-46ce-8b15-8d57010b4106", [{"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30], "mode": "line", "name": "f(x, y) at y=1", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90], "mode": "line", "name": "f(x, y) at y=3", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 18, 36, 54, 72, 90, 108, 126, 144, 162, 180], "mode": "line", "name": "f(x, y) at y=6", "text": []}, {"x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 27, 54, 81, 108, 135, 162, 189, 216, 243, 270], "mode": "line", "name": "f(x, y) at y=9", "text": []}], {"title": "constants with linear functions"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
+<div id="e685656b-ee8b-4e03-b59b-f7a9ed55354d" style="height: 525px; width: 100%;" class="plotly-graph-div"></div><script type="text/javascript">require(["plotly"], function(Plotly) { window.PLOTLYENV=window.PLOTLYENV || {};window.PLOTLYENV.BASE_URL="https://plot.ly";Plotly.newPlot("e685656b-ee8b-4e03-b59b-f7a9ed55354d", [{"mode": "lines", "name": "f(x, y) at y=1", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30], "type": "scatter", "uid": "259efb5c-cccd-11e8-bf7c-88e9fe61eb3a"}, {"mode": "lines", "name": "f(x, y) at y=3", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 9, 18, 27, 36, 45, 54, 63, 72, 81, 90], "type": "scatter", "uid": "259efcba-cccd-11e8-8048-88e9fe61eb3a"}, {"mode": "lines", "name": "f(x, y) at y=6", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 18, 36, 54, 72, 90, 108, 126, 144, 162, 180], "type": "scatter", "uid": "259efd78-cccd-11e8-af9d-88e9fe61eb3a"}, {"mode": "lines", "name": "f(x, y) at y=9", "text": [], "x": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "y": [0, 27, 54, 81, 108, 135, 162, 189, 216, 243, 270], "type": "scatter", "uid": "259efe18-cccd-11e8-85b6-88e9fe61eb3a"}], {"title": "constants with linear functions"}, {"showLink": true, "linkText": "Export to plot.ly"})});</script>
 
 
-Now let's think of how to take the derivative of our $ \frac{\delta f}{\delta x} f(x, y)$ at values of $y$.  Knowing how to think about partial derivatives of multivarivable functions, what is $ \frac{\delta f}{\delta x} $ at the following values of $y$.
+Now let's think of how to take the derivative of our $ \frac{\delta f}{\delta x} f(x, y)$ at values of $y$.  Knowing how to think about partial derivatives of multivariable functions, what is $ \frac{\delta f}{\delta x} $ at the following values of $y$.
 
 
 ```python
@@ -480,8 +482,3 @@ df_dy(two_x_cubed_y_plus_three_y_x_plus_x) # [(2, 3, 0), (3, 1, 0)]
 
 
 Great job! Hopefully, now you understand a little more about multivariable functions and derivatives!
-
-
-```python
-
-```
