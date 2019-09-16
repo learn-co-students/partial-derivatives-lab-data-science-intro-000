@@ -7,7 +7,7 @@ In this lesson, we'll get some more practice with partial derivatives.
 
 ### Breaking down multivariable functions
 
-In our explanation of derivatives, we discussed how taking the derivative of multivariable functions is similar to taking the derivatives of a single variable function like $f(x)$.  In the first section we'll work up to taking the partial derivative of the multilinear function $ f(x,y) = 3xy $.  Here's what the function looks like in a 3d graph.
+In our explanation of derivatives, we discussed how taking the derivative of multivariable functions is similar to taking the derivatives of single variable functions like $f(x)$.  In the first section we'll work up to taking the partial derivative of the multilinear function $ f(x,y) = 3xy $.  Here's what the function looks like in a 3d graph.
 
 ![](./3xy.png)
 
